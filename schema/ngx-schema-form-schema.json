@@ -59,7 +59,9 @@
             {
               "$ref": "#/definitions/widgetTypeCustom"
             }
-          ]
+          ],
+          "pattern": "^\\S*$",
+          "minLength": 1
         },
         "buttons": {
           "$ref": "#/definitions/buttonArrayType"
@@ -103,7 +105,10 @@
           }
         }
       },
-      "additionalProperties": true
+      "additionalProperties": true,
+      "required": [
+        "id"
+      ]
     },
     "buttonType": {
       "description": "[NSF] - A list of buttons to trigger some action for this field.",
